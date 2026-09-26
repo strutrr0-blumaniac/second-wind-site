@@ -1,0 +1,175 @@
+:root {
+  --bg: #0a0a0a;
+  --bg-soft: #111111;
+  --card: #141414;
+  --gold: #d4af37;
+  --gold-light: #f2d67c;
+  --gold-deep: #a8842a;
+  --ink: #f5f1e6;
+  --muted: #b3ab93;
+  --border: #2b2417;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+h1, h2, h3 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  color: var(--gold-light);
+  letter-spacing: 0.5px;
+}
+header.site {
+  padding: 22px 20px 10px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.brand img {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid var(--gold-deep);
+}
+.brand strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+nav { margin-top: 12px; }
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+nav a:hover { color: var(--gold-light); }
+
+.hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 56px 22px 34px;
+  text-align: center;
+}
+.hero img.logo {
+  width: 148px;
+  height: 148px;
+  border-radius: 34px;
+  border: 2px solid var(--gold-deep);
+  box-shadow: 0 0 60px rgba(212, 175, 55, 0.25);
+  margin-bottom: 26px;
+}
+.hero h1 {
+  font-size: clamp(42px, 8vw, 74px);
+  line-height: 1.05;
+  margin: 0 0 18px;
+}
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 22px;
+  font-size: 20px;
+  color: var(--muted);
+}
+.badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid var(--gold-deep);
+  border-radius: 999px;
+  color: var(--gold-light);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+main { max-width: 960px; margin: 0 auto; padding: 0 20px 60px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 30px 28px;
+  margin: 22px 0;
+}
+.card h2 { font-size: 30px; margin: 0 0 14px; }
+.card p { color: var(--muted); }
+.card p strong, .card li strong { color: var(--ink); }
+.steps {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+}
+.step {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  background: var(--bg-soft);
+}
+.step .num {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 30px;
+  color: var(--gold);
+}
+.step h3 { margin: 6px 0 8px; font-size: 21px; }
+.step p { margin: 0; color: var(--muted); }
+.categories {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+.category {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px 20px;
+  background: var(--bg-soft);
+}
+.category h3 { margin: 0 0 6px; font-size: 20px; }
+.category p { margin: 0; color: var(--muted); font-size: 16px; }
+ul.features { padding-left: 22px; color: var(--muted); }
+ul.features li { margin-bottom: 10px; }
+a.button {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, var(--gold-light), var(--gold));
+  color: #0a0a0a;
+  text-decoration: none;
+  font-weight: 800;
+  margin: 8px;
+  border: none;
+}
+a.button:hover { filter: brightness(1.06); }
+a.secondary {
+  background: transparent;
+  color: var(--gold-light);
+  border: 1px solid var(--gold-deep);
+}
+.cta { text-align: center; padding: 44px 20px; }
+.cta h2 { font-size: clamp(30px, 5vw, 44px); margin: 0 0 12px; }
+.cta p { color: var(--muted); max-width: 600px; margin: 0 auto 20px; }
+.footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 36px 20px 54px;
+  border-top: 1px solid var(--border);
+}
+.footer a { color: var(--gold); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+.notice { font-size: 14px; }
+h1.page-title { font-size: 40px; margin: 0 0 10px; }
+.effective { color: var(--muted); font-size: 15px; }
+
+@media (min-width: 720px) {
+  .steps { grid-template-columns: repeat(3, 1fr); }
+  .categories { grid-template-columns: repeat(2, 1fr); }
+}
